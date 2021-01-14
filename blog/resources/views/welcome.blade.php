@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Milktea UST</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -14,7 +14,7 @@
 			<img src="img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="/login" method="POST">
 				<img src="img/avatar.svg">
 				<h2 class="title">Welcome to MILKTEA UST</h2>
            		<div class="input-div one">
@@ -23,7 +23,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" name="email" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -32,14 +32,18 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="password" class="input">
             	   </div>
             	</div>
             	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
+            	<input type="submit" class="btn" name="submit" value="Login">
+				{{csrf_field()}}
             </form>
         </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
+	<script>
+		console.log(url('/css/style.css'));
+	</script>
 </body>
 </html>

@@ -16,18 +16,21 @@
     <div class="sidebar-logo">
       <a href="index.html" style="text-decoration: none;color:white;">MILKTEA TSU</a>
     </div>
-    <ul class="sidebar-navigation">
-      <li class="header">QUẢN LÝ</li>
-      <li>
-        <a href="sanpham.html">
-          <i class="fa fa-home" aria-hidden="true"></i>SẢN PHẨM
-        </a>
-      </li>
-      <li>
-        <a href="nhanvien.html">
-          <i class="fa fa-tachometer" aria-hidden="true"></i>NHÂN VIÊN
-        </a>
-      </li>
+   
+      <ul class="sidebar-navigation">
+        @if($user->role_id == 1)
+          <li class="header">QUẢN LÝ</li>
+          <li>
+            <a href="sanpham.html">
+              <i class="fa fa-home" aria-hidden="true"></i>SẢN PHẨM
+            </a>
+          </li>
+          <li>
+            <a href="nhanvien.html">
+              <i class="fa fa-tachometer" aria-hidden="true"></i>NHÂN VIÊN
+            </a>
+          </li>
+        @endif
       <li class="header">HỆ THỐNG</li>
       <li>
         <a href="lichsuhoado.html">
@@ -51,7 +54,7 @@
               <div class="card-body">
                 <h4 class="card-title">NHÂN VIÊN</h4>
                 <p class="card-text">Danh sách nhân viên</p>
-                <a href="nhanvien.html" class="btn btn-primary">XEM</a>
+                <a href="{{route('nhanvien')}}" class="btn btn-primary">XEM</a>
               </div>
             </div>
           </div>
@@ -61,7 +64,7 @@
               <div class="card-body">
                 <h4 class="card-title">SẢN PHẨM</h4>
                 <p class="card-text">Danh sách sản phẩm</p>
-                <a href="sanpham.html" class="btn btn-primary">XEM</a>
+                <a href="{{route('sanpham')}}" class="btn btn-primary">XEM</a>
               </div>
             </div>
           </div>
@@ -73,7 +76,7 @@
               <div class="card-body">
                 <h4 class="card-title">LỊCH SỬ GIAO DỊCH</h4>
                 <p class="card-text">Hóa đơn giao dịch</p>
-                <a href="lichsuhoado.html" class="btn btn-primary">XEM</a>
+                <a href="{{route('hoadon')}}" class="btn btn-primary">XEM</a>
               </div>
             </div>
           </div>
@@ -83,7 +86,7 @@
               <div class="card-body">
                 <h4 class="card-title">DOANH THU</h4>
                 <p class="card-text">Doanh thu bán ra</p>
-                <a href="doanhthu.html" class="btn btn-primary">XEM</a>
+                <a href="{{route('lichsu')}}" class="btn btn-primary">XEM</a>
               </div>
             </div>
           </div>

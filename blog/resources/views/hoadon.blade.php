@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bán hàng</title>
-    <link rel="stylesheet" href="css/all.css">
+	<link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
+
     <div class="sidebar-container">
         <div class="sidebar-logo" style="font-family: 'Times New Roman', Times, serif;">
             MILKTEA TSU
@@ -49,7 +51,7 @@
                     <div class="row" style="margin: 2%">
                         <div class="col-3">
                             <div class="card">
-                                <img src="images/trasua1.PNG" alt="Avatar" style="width:100%">
+                                <img src=" img/trasua1.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Truyền Thống</b></h4>
                                     <p>23.000đ</p>
@@ -58,7 +60,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua2.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua2.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Socola</b></h4>
                                     <p>25.000đ</p>
@@ -67,7 +69,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua3.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua3.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Khoai Môn</b></h4>
                                     <p>25.000đ</p>
@@ -76,7 +78,7 @@
                         </div>
                         <div class="col-3">
                             <div class="card">
-                                <img src="images/trasua4.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua4.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Trái Cây</b></h4>
                                     <p>25.000đ</p>
@@ -89,7 +91,7 @@
 
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua5.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua5.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Olong</b></h4>
                                     <p>23.000đ</p>
@@ -98,7 +100,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua6.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua6.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Thái</b></h4>
                                     <p>25.000đ</p>
@@ -107,7 +109,7 @@
                         </div>
                         <div class="col-3">
                             <div class="card">
-                                <img src="images/trasua7.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua7.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa Hoa Lài</b></h4>
                                     <p>23.000đ</p>
@@ -116,7 +118,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua8.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua8.png" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <h4><b>Trà Sữa MatCha</b></h4>
                                     <p>25.000đ</p>
@@ -130,7 +132,7 @@
                     <div class="row" style="margin: 2%">
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua9.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua9.PNG" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <table>
                                         <tr>
@@ -145,7 +147,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua10.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua10.PNG" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <tr>
                                         <h4><b>Trà Olong Vải</b></h4>
@@ -158,7 +160,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua11.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua11.PNG" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <tr>
                                         <h4><b>Trà Đào</b></h4>
@@ -171,7 +173,7 @@
                         </div>
                         <div class=" col-3">
                             <div class="card">
-                                <img src="images/trasua12.PNG" alt="Avatar" style="width:100%">
+                                <img src="img/trasua12.PNG" alt="Avatar" style="width:100%">
                                 <div class="container-info">
                                     <tr>
                                         <h4><b>Trà Xoài</b></h4>
