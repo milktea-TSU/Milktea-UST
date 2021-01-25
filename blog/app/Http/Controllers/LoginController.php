@@ -13,7 +13,7 @@ class LoginController extends Controller
     {  
         if (Auth::attempt(['email' => $rq->email, 'password' => $rq->password])) {
             $user=Auth::user();
-            return view('homeql')->with('user',$user);
+            return view('homeql',['name'=> $user->name])->with('user',$user);
         } else {
             dd('Đăng nhập thất bại');
         }
