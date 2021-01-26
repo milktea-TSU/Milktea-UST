@@ -67,6 +67,8 @@ class ProductController extends Controller
         return redirect()->back();
     }
     public function getAddToCart(Request $req ,$id){
+        
+
         $product = Product::find($id);
         $oldCart=Session('cart')?FacadesSession::get('cart'):null;
         $cart =new Cart($oldCart);

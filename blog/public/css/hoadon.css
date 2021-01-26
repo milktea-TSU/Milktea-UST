@@ -179,9 +179,19 @@ body {
     text-align: center;
 }
 
+.ble {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+}
+
 .bla {
     position: absolute;
     top: 90%;
+}
+
+.col-sm-6 {
+    padding-bottom: 15px;
 }
 
 .card:nth-child(2) {

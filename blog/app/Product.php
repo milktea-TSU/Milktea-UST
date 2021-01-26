@@ -13,7 +13,8 @@ class Product extends Model
         'price',
         'image'
     ];
-    public function Orders(){
-        return $this->belongsToMany(Order::class,'orderdetail','order_id','product_id');
+    public function orderdetail(){
+        return $this->hasMany(OrderDetail::class,'product_id','id');
     }
+    
 }

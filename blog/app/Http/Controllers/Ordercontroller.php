@@ -22,22 +22,13 @@ class Ordercontroller extends Controller
 
     public function store()
     {
-        $sum = 0;
         $carts = FacadesSession::get('cart');
-       
-        foreach($carts->items as $cart => $item){
-            $sum+=$item['item']['price'];
-
-        }
         $order = Order::create([
-            'tong'=>$sum,
-            'ngayban'=>now()    
+            'tong'=>$carts->totalPrice,
+            'ngayban'=>now(),
+            'user_id'=>Auth::id()
         ]);
         $order->save();
-        foreach($carts->items as $cart => $item){
-            $product = Product::find($item['item']['id']);
-            $order->products()->attach($item['item']['id']);
-        }
         Session()->forget('cart');
         return redirect()->back();
     }

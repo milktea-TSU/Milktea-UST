@@ -19,7 +19,7 @@
                     @foreach ($products as $product)
                     <div class="col-sm-6">
                         <div class="col-item">
-                            <div class="photo"> <img src="{{URL::to('storage/app/public/'.$product->image)}}" class="img-responsive" alt="{{$product->name}}">
+                            <div class="photo"> <img src="{{Storage::url($product->image)}}" class="img-responsive" alt="{{$product->name}}">
                             </div>
                             <div class="info">
                                 <div class="row">
@@ -29,11 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="separator clear-left">
-                                    <form action="{{route('addCart',$product->id)}}" method="GET">
-                                        {{ csrf_field() }}
-                                        <input type="hidden" name="product_id" value="{{ $product->id }}" <i class="fa fa-heart-o"></i>
-                                        <input type="submit" class="btn btn-primary" value="Đặt Hàng"></i>
-                                    </form>
+                                    <a href="{{route('addCart',$product->id)}}"> <input type="button" class="btn btn-primary" value="Đặt Hàng"></a>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
@@ -50,25 +46,32 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th style="width: 100px;">Sản phẩm</th>
+                        <th style="width: 100px;">STT</th>
                         <th style="width: 50px;">Sản phẩm</th>
+                        <th style="width: 50px;">Số lượng</th>
                         <th style="width: 50px;">Giá</th>
                     </tr>
                 </thead>
                 <tbody>
-
-                    @if(Session('cart'))
+                    @php
+                    $i = 1;
+                    @endphp
+                    @if(Session::has('cart'))
                     @foreach($product_card as $product)
                     <tr>
-                        <td style="width: 100px;"><img src="{{$product['item']['name']}}" alt=""></td>
+
+                        <td style="width: 100px;">{{$i++}}</td>
                         <td style="width: 50px;">{{$product['item']['name']}}</td>
-                        <td style="width: 50px;">{{$product['item']['price']}}vnđ</td>
+                        <td style="width: 50px;">{{$product['qty']}}</td>
+                        <td style="width: 50px;">{{$product['price']}}vnđ</td>
                         <td style="width: 50px;"><a href="{{route('deleteCart',$product['item']['id'])}}">Xóa</a></td>
                     </tr>
                     @endforeach
-                    
-                    @endif
                     <a href="{{route('order.store')}}" class="btn btn-primary bla">Thanh Toán</a>
+                     <p class="ble">Tổng: <span>{{Session('cart')->totalPrice}}vnđ</p>
+                    @endif
+
+
                 </tbody>
             </table>
         </div>
@@ -76,6 +79,6 @@
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>
-    
+
 </script>
 @endsection
