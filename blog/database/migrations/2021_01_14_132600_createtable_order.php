@@ -17,6 +17,7 @@ class CreatetableOrder extends Migration
             $table->increments('id');
             $table->dateTime('ngayban', 0);
             $table->string('tong');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

@@ -12,7 +12,10 @@ class Order extends Model
         'ngayban',
         'tong'
     ];
-    public function Products(){
-        return $this->belongsToMany(Product::class,'orderdetail','product_id','order_id');
+    public function user(){
+        return $this->hasOne(User::class);
+    }
+    public function orderdetail(){
+        return $this->hasMany(OrderDetail::class,'order_id','id');
     }
 }

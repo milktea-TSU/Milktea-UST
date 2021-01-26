@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
             if (Session('cart')) {
                 $oldCart = FacadesSession::get('cart');
                 $cart = new Cart($oldCart);
-                $view->with(['cart' => FacadesSession::get('cart'), 'product_card' => $cart->items]);
+                $view->with(['cart' => FacadesSession::get('cart'), 'product_card' => $cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
             }
         });
     }
